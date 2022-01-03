@@ -1,0 +1,27 @@
+C++输入
+常使用的cin
+少见的cin.getline, getline
+
+cin.getline
+std::istream::getline
+istream& getline(char* s, streamsize n);
+istream& getline(char* s, streamsize n,char delim);
+Parameters
+s: Pointer to an array of characters where extracted characters are stored as a c-string
+n: maximum number of characters to write to s
+delim: explicit delimiting characters
+example:
+char name[256];
+cin.getline(name, 25);
+
+
+getline
+istream& getline(istream& is, string& str);
+istream& getline(istream& is, string& str, char delim);
+Parameters:
+is: istream object from which characters are extracted.
+str: string object where the extracted line is stored.
+example:
+#include<string>
+string name;
+getline(cin,name);
